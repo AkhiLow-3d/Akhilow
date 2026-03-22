@@ -1,171 +1,209 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>akhiLowのホームページ</title>
-  <meta name="description" content="Blenderで制作した3Dアセットのポートフォリオ・販売ページです。">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Yu Gothic", sans-serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.7;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>akhiLowのホームページ</title>
 
-    a {
-      color: #0000cc;
-      text-decoration: underline;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: "MS PGothic", "Yu Gothic", sans-serif;
+  background-color: #f3f3f3;
 
-    .layout {
-      display: flex;
-      min-height: 100vh;
-    }
+  /* ←ここだけ変更：あなたの背景画像 */
+  background-image: url("bg-tile.jpg");
+  background-repeat: repeat;
 
-    .sidebar {
-      width: 260px;
-      border-right: 1px solid #999;
-      background: #f6f6f6;
-      padding: 16px;
-      position: sticky;
-      top: 0;
-      height: 100vh;
-    }
+  color: #111;
+  line-height: 1.7;
+  font-size: 15px;
+}
 
-    .sidebar h1 {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
+/* リンク（昔風） */
+a { color: #0000cc; text-decoration: underline; }
+a:visited { color: #660099; }
 
-    .menu-title {
-      font-weight: bold;
-      margin-top: 16px;
-    }
+/* レイアウト */
+.layout { display: flex; min-height: 100vh; }
 
-    .menu-list {
-      list-style: none;
-      padding: 0;
-    }
+/* 左メニュー */
+.sidebar {
+  width: 240px;
+  border-right: 2px solid #999;
+  background: #eeeeee;
+  padding: 14px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
 
-    .menu-list li {
-      margin: 6px 0;
-    }
+.sidebar h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
 
-    .main {
-      flex: 1;
-      padding: 24px;
-      max-width: 900px;
-    }
+/* メニュー */
+.menu-title {
+  font-weight: bold;
+  margin-top: 14px;
+  border-bottom: 1px solid #999;
+}
 
-    .box {
-      border: 1px solid #999;
-      padding: 16px;
-      margin-bottom: 20px;
-    }
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
 
-    img {
-      width: 100%;
-      border: 1px solid #aaa;
-      margin-bottom: 10px;
-    }
+.menu-list li {
+  margin: 4px 0;
+}
 
-    .cta {
-      display: inline-block;
-      border: 1px solid #666;
-      padding: 6px 10px;
-      background: #f8f8f8;
-      margin-top: 10px;
-    }
+/* メイン */
+.main {
+  flex: 1;
+  padding: 20px;
+  max-width: 880px;
+}
 
-    @media (max-width: 900px) {
-      .layout {
-        display: block;
-      }
-      .sidebar {
-        height: auto;
-        position: static;
-        border-bottom: 1px solid #999;
-      }
-    }
-  </style>
+/* ボックス */
+.box {
+  border: 2px solid #999;
+  background: #ffffff;
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+/* 見出し */
+h2 {
+  margin-top: 0;
+  font-size: 22px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 画像 */
+img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #999;
+  margin-bottom: 10px;
+}
+
+/* ボタン */
+.cta {
+  display: inline-block;
+  border: 1px solid #666;
+  padding: 6px 10px;
+  background: #f0f0f0;
+  margin-top: 8px;
+}
+
+/* スマホ */
+@media (max-width: 900px) {
+  .layout { display: block; }
+  .sidebar {
+    height: auto;
+    position: static;
+    border-bottom: 2px solid #999;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <div class="layout">
 
-  <!-- 左メニュー -->
-  <aside class="sidebar">
-    <h1>akhiLowのホームページ</h1>
+<!-- 左メニュー -->
+<aside class="sidebar">
+  <h1>akhiLowのホームページ</h1>
 
-    <p>Blenderで制作した<br>3Dアセットの紹介・販売案内</p>
+  <p>Blenderで制作した<br>3Dアセットの紹介・販売案内</p>
 
-    <div class="menu-title">メニュー</div>
-    <ul class="menu-list">
-      <li><a href="#top">トップ</a></li>
-      <li><a href="#featured">代表作品</a></li>
-      <li><a href="#shop">販売リンク</a></li>
-      <li><a href="#profile">プロフィール</a></li>
-    </ul>
+  <div class="menu-title">メニュー</div>
+  <ul class="menu-list">
+    <li><a href="#top">トップ</a></li>
+    <li><a href="#featured">代表作品</a></li>
+    <li><a href="#works">作品一覧</a></li>
+    <li><a href="#shop">販売リンク</a></li>
+    <li><a href="#profile">プロフィール</a></li>
+  </ul>
 
-    <div class="menu-title">外部リンク</div>
-    <ul class="menu-list">
-      <li><a href="https://akhilow.booth.pm/" target="_blank">BOOTHで見る</a></li>
-      <li><a href="https://www.fab.com/ja/sellers/AkhiLow" target="_blank">FABで見る</a></li>
-      <li><a href="https://x.com/Akhilow3113" target="_blank">Xを見る</a></li>
-    </ul>
-  </aside>
+  <div class="menu-title">外部リンク</div>
+  <ul class="menu-list">
+    <li><a href="https://akhilow.booth.pm/" target="_blank">BOOTHで見る</a></li>
+    <li><a href="https://www.fab.com/ja/sellers/AkhiLow" target="_blank">FABで見る</a></li>
+    <li><a href="https://x.com/Akhilow3113" target="_blank">Xを見る</a></li>
+  </ul>
 
-  <!-- 右コンテンツ -->
-  <main class="main">
+  <div class="menu-title">更新</div>
+  <p style="font-size:13px;">
+    最終更新：2026年3月<br>
+    ・教室アセット追加
+  </p>
+</aside>
 
-    <!-- トップ -->
-    <section id="top" class="box">
-      <h2>ゲーム・VRChat向けの3Dアセットを制作しています。</h2>
-      <p>家具、小物、部屋、背景アセットなどを制作しています。</p>
-      <a class="cta" href="#shop">→ 販売ページへ</a>
-    </section>
+<!-- メイン -->
+<main class="main">
 
-    <!-- 代表作品 -->
-    <section id="featured" class="box">
-      <h2>代表作品</h2>
+<!-- トップ -->
+<section id="top" class="box">
+  <h2>ゲーム・VRChat向けの3Dアセットを制作しています。</h2>
+  <p>
+    家具、小物、部屋、背景アセットなど、すぐ使えるモデルを制作しています。
+  </p>
+  <a class="cta" href="#shop">→ 販売ページへ</a>
+</section>
 
-      <img src="images/classroom.png" alt="教室モデル">
+<!-- 代表作品 -->
+<section id="featured" class="box">
+  <h2>代表作品</h2>
 
-      <h3>教室アセット（Classroom）</h3>
-      <p>
-        教室シーンを再現できる3Dアセットです。<br>
-        VRChatや背景制作にそのまま使える構成になっています。
-      </p>
+  <img src="classroom.jpg" alt="教室アセット">
 
-      <a href="https://akhilow.booth.pm/" target="_blank">
-        → BOOTHで見る
-      </a>
-    </section>
+  <h3>教室アセット（Classroom）</h3>
+  <p>
+    VRChatや背景制作にそのまま使える教室アセットです。
+  </p>
 
-    <!-- 販売リンク -->
-    <section id="shop" class="box">
-      <h2>販売リンク</h2>
-      <ul>
-        <li><a href="https://akhilow.booth.pm/" target="_blank">BOOTHで作品を見る</a></li>
-        <li><a href="https://www.fab.com/ja/sellers/AkhiLow" target="_blank">FABで作品を見る</a></li>
-        <li><a href="https://x.com/Akhilow3113" target="_blank">Xで更新を見る</a></li>
-      </ul>
-    </section>
+  <a class="cta" href="https://akhilow.booth.pm/" target="_blank">
+    → BOOTHで見る
+  </a>
+</section>
 
-    <!-- プロフィール -->
-    <section id="profile" class="box">
-      <h2>プロフィール</h2>
-      <p>akhiLow</p>
-      <p>
-        Blenderで3Dモデルを制作しています。<br>
-        家具、小物、部屋、背景アセットを中心に制作しています。
-      </p>
-    </section>
+<!-- 作品一覧 -->
+<section id="works" class="box">
+  <h2>作品一覧</h2>
+  <ul>
+    <li>生活感ある家具シリーズ</li>
+    <li>和風の部屋 / 室内背景</li>
+    <li>小物・背景アセット</li>
+    <li>VRChat向け配置モデル</li>
+  </ul>
+</section>
 
-  </main>
+<!-- 販売リンク -->
+<section id="shop" class="box">
+  <h2>販売リンク</h2>
+  <ul>
+    <li><a href="https://akhilow.booth.pm/" target="_blank">BOOTHで作品を見る</a></li>
+    <li><a href="https://www.fab.com/ja/sellers/AkhiLow" target="_blank">FABで作品を見る</a></li>
+    <li><a href="https://x.com/Akhilow3113" target="_blank">Xで更新を見る</a></li>
+  </ul>
+</section>
 
+<!-- プロフィール -->
+<section id="profile" class="box">
+  <h2>プロフィール</h2>
+  <p>akhiLow</p>
+  <p>
+    Blenderで3Dモデルを制作しています。<br>
+    家具、小物、部屋、背景アセットを中心に制作しています。
+  </p>
+</section>
+
+</main>
 </div>
 
 </body>
