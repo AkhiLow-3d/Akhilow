@@ -4,67 +4,322 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>akhiLowのホームページ</title>
+  <meta name="description" content="Blenderで制作した3Dアセットのポートフォリオ・販売リンク集です。家具、小物、部屋、背景アセットなどを公開しています。">
   <style>
     body {
       margin: 0;
-      padding: 24px;
-      font-family: sans-serif;
-      line-height: 1.7;
+      font-family: "MS PGothic", "Yu Gothic", sans-serif;
       background: #ffffff;
       color: #111111;
-      max-width: 900px;
-      margin-inline: auto;
+      line-height: 1.7;
+      font-size: 16px;
     }
-    h1, h2 {
-      margin-top: 0;
+
+    a {
+      color: #0000cc;
+      text-decoration: underline;
     }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      border-right: 1px solid #999;
+      background: #f6f6f6;
+      padding: 16px 14px;
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .sidebar h1 {
+      font-size: 26px;
+      margin: 0 0 16px 0;
+      line-height: 1.3;
+    }
+
+    .sidebar .sub {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .menu-title {
+      font-weight: bold;
+      margin: 18px 0 8px;
+      font-size: 18px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin: 6px 0;
+    }
+
+    .main {
+      flex: 1;
+      padding: 24px;
+      box-sizing: border-box;
+      max-width: 980px;
+    }
+
     .box {
       border: 1px solid #999;
       padding: 16px;
       margin-bottom: 20px;
+      background: #fff;
     }
-    img {
-      max-width: 100%;
-      height: auto;
+
+    .hero-title {
+      font-size: 38px;
+      margin: 0 0 12px 0;
+      line-height: 1.25;
+    }
+
+    .lead {
+      font-size: 18px;
+      margin: 0 0 8px 0;
+    }
+
+    .notice {
+      font-size: 14px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border: 1px solid #666;
+      text-decoration: none;
+      background: #f8f8f8;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin: 0 0 12px 0;
+    }
+
+    .works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .work-card {
       border: 1px solid #999;
+      padding: 12px;
+      background: #fff;
     }
-    ul {
+
+    .work-card img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #aaa;
+      display: block;
+      margin-bottom: 10px;
+      background: #f0f0f0;
+    }
+
+    .work-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 20px;
+    }
+
+    .work-card p {
+      margin: 0 0 8px 0;
+      font-size: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      border: 1px solid #999;
+      padding: 2px 6px;
+      margin: 0 6px 6px 0;
+      background: #f6f6f6;
+    }
+
+    .link-list {
+      margin: 0;
       padding-left: 20px;
     }
-    a {
-      color: blue;
+
+    .footer {
+      font-size: 13px;
+      color: #333;
+    }
+
+    .small {
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        display: block;
+      }
+
+      .sidebar {
+        width: auto;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid #999;
+      }
+
+      .main {
+        max-width: none;
+      }
+
+      .hero-title {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>akhiLowのホームページ</h1>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>akhiLowの<br>ホームページ</h1>
+      <div class="sub">
+        Blenderで制作した<br>
+        3Dアセットの紹介・販売案内
+      </div>
 
-  <div class="box">
-    <p>Blenderで3Dモデルを制作しています。</p>
-    <p>家具、小物、部屋、背景アセットなどを作っています。</p>
-  </div>
+      <div class="menu-title">メニュー</div>
+      <ul class="menu-list">
+        <li><a href="#top">トップ</a></li>
+        <li><a href="#featured">代表作品</a></li>
+        <li><a href="#works">作品一覧</a></li>
+        <li><a href="#shop">販売リンク</a></li>
+        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#contact">連絡</a></li>
+      </ul>
 
-  <div class="box">
-    <h2>作品</h2>
-    <ul>
-      <li>和風の部屋</li>
-      <li>生活感ある家具シリーズ</li>
-      <li>小物・背景アセット</li>
-    </ul>
-  </div>
+      <div class="menu-title">外部リンク</div>
+      <ul class="menu-list">
+        <li><a href="https://booth.pm/ja" target="_blank" rel="noopener noreferrer">BOOTHで見る</a></li>
+        <li><a href="https://www.fab.com/" target="_blank" rel="noopener noreferrer">FABで見る</a></li>
+        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">Xを見る</a></li>
+      </ul>
 
-  <div class="box">
-    <h2>リンク</h2>
-    <ul>
-      <li><a href="#">BOOTH</a></li>
-      <li><a href="#">FAB</a></li>
-      <li><a href="#">X</a></li>
-    </ul>
-  </div>
+      <div class="menu-title">更新状況</div>
+      <div class="small">
+        ・新作を順次追加予定<br>
+        ・家具 / 小物 / 背景アセット中心
+      </div>
+    </aside>
 
-  <div class="box">
-    <h2>連絡</h2>
-    <p>制作・公開情報はXで更新予定です。</p>
+    <main class="main">
+      <section id="top" class="box">
+        <h2 class="hero-title">ゲーム・VRChat向けの<br>3Dアセットを制作しています。</h2>
+        <p class="lead">
+          家具、小物、部屋、背景アセットなど、使いやすく配置しやすいモデルを制作しています。
+        </p>
+        <p>
+          シンプルで軽いページですが、作品と販売先がすぐ見つかるようにまとめています。
+        </p>
+        <a class="cta" href="#shop">→ 販売リンクを見る</a>
+      </section>
+
+      <section id="featured" class="box">
+        <h2 class="section-title">代表作品</h2>
+        <div class="works">
+          <article class="work-card">
+            <img src="images/main-work.jpg" alt="代表作品の画像">
+            <h3>生活感ある家具アセット</h3>
+            <p>
+              部屋づくりや背景制作に使いやすい、生活感を意識した家具モデルです。
+            </p>
+            <div>
+              <span class="tag">家具</span>
+              <span class="tag">背景向け</span>
+              <span class="tag">Blender</span>
+            </div>
+            <p><a href="https://booth.pm/ja" target="_blank" rel="noopener noreferrer">→ BOOTHの商品ページへ</a></p>
+          </article>
+
+          <article class="work-card">
+            <img src="images/room-work.jpg" alt="和風の部屋の画像">
+            <h3>和風の部屋・背景セット</h3>
+            <p>
+              和室や生活空間をイメージした背景アセットです。スクリーンショット用途にも向いています。
+            </p>
+            <div>
+              <span class="tag">部屋</span>
+              <span class="tag">和風</span>
+              <span class="tag">背景</span>
+            </div>
+            <p><a href="https://www.fab.com/" target="_blank" rel="noopener noreferrer">→ FABの商品ページへ</a></p>
+          </article>
+        </div>
+        <p class="notice">
+          ※ 画像ファイルはあとで差し替えてください。今は `images/main-work.jpg` などを指定しています。
+        </p>
+      </section>
+
+      <section id="works" class="box">
+        <h2 class="section-title">作品一覧</h2>
+        <ul class="link-list">
+          <li>生活感ある家具シリーズ</li>
+          <li>和風の部屋 / 室内背景</li>
+          <li>小物・背景アセット</li>
+          <li>VRChatやゲーム向けの配置用モデル</li>
+        </ul>
+        <p>
+          今後は作品数が増えたら、ここを「画像つき一覧」に広げていく想定です。
+        </p>
+      </section>
+
+      <section id="shop" class="box">
+        <h2 class="section-title">販売リンク</h2>
+        <ul class="link-list">
+          <li><a href="https://booth.pm/ja" target="_blank" rel="noopener noreferrer">BOOTHで作品を見る</a></li>
+          <li><a href="https://www.fab.com/" target="_blank" rel="noopener noreferrer">FABで作品を見る</a></li>
+          <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">Xで更新情報を見る</a></li>
+        </ul>
+        <p>
+          ここは必ず、あなた自身のURLに差し替えてください。  
+          今のままだとただの仮リンクです。
+        </p>
+      </section>
+
+      <section id="profile" class="box">
+        <h2 class="section-title">プロフィール</h2>
+        <p>
+          akhiLow
+        </p>
+        <p>
+          Blenderで3Dモデルを制作しています。  
+          家具、小物、部屋、背景アセットなどを中心に、使いやすさと雰囲気の両立を意識して制作しています。
+        </p>
+        <p>
+          「すぐ使えること」「雰囲気が出ること」「並べやすいこと」を重視しています。
+        </p>
+      </section>
+
+      <section id="contact" class="box">
+        <h2 class="section-title">連絡</h2>
+        <p>
+          新作の公開情報や更新はXで案内予定です。
+        </p>
+        <p>
+          <a href="https://x.com/" target="_blank" rel="noopener noreferrer">→ Xを見る</a>
+        </p>
+      </section>
+
+      <div class="footer">
+        このページは GitHub Pages で公開しています。
+      </div>
+    </main>
   </div>
 </body>
 </html>
